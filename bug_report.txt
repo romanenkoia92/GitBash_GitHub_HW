@@ -1,0 +1,13 @@
+A bug report should contain the following fields:
+    
+    1. Bug ID
+    2. Severity
+    3. Priority
+    4. Envinronment
+    5. Preconditions
+    6. Summary
+    7. Steps to reproduse
+    8. Attach
+    9. Actual result
+    10. Expected result
+    11. Status

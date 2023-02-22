@@ -1,0 +1,93 @@
+1. На локальном репозитории сделать ветки для: Postman, Jmeter, CheckLists, Bag Reports, SQL, Charles, Mobile testing
+
+ - Заходим в свой профиль на GitHub.
+ - Нажимаем "Repositories"
+ - Далее кнопка "New"
+ - Пишем название репозитория "Branhces", ставим галочку напротив поля "Add a README file", нажимаем на кнопку "Create repository"
+ - Заходим в созданный репозиторий Branhces
+ - Нажимаем на кнопку "Code"
+ - Копируем ссылку https://github.com/romanenkoia92/GitBash_GitHub_HW.git
+ - Заходим в GitBash
+ - Клонируем репозиторий на локал 
+   git clone https://github.com/romanenkoia92/GitBash_GitHub_HW.git
+ - cd Branhces - заходим в папку GitBash_GitHub_HW
+ - git branch Postman | git branch Jmeter | git branch CheckLists | git branch Bag_Reports | git branch SQL | git branch Charles | git branch Mobile_testing - создаем ветки
+
+2. Запушить все ветки на внешний репозиторий
+
+ - git push -u origin Postman | git push -u origin Jmeter | git push -u origin CheckLists | git push -u origin Bag_Reports | git push -u origin SQL | git push -u origin Charles | git push -u origin Mobile_testing
+
+или
+
+ - git push -u origin Postman SQL Jmeter CheckLists Charles Bag_Reports Mobile_testing
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+ - git checkout Bag_Reports - заходим в ветку Bag_Reports
+ - touch bug_report.txt - создать текстовый файл
+ - vim bug_report.txt - открываем редактор файла
+ - i - начать редактирование
+ - A bug report should contain the following fields:
+    1. Bug ID
+    2. Severity
+    3. Priority
+    4. Envinronment
+    5. Preconditions
+    6. Summaryg
+    7. Steps to reproduse:wq
+    8. Attach
+    9. Actual result
+    10. Expected result
+    11. Status
+ - esc - выход с режима редактирования
+ - :wq - сохраняем и выходим
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+ - git add . - добавили файл од гит
+ - git commit -m 'add structure' - закоммитили файл
+ - git push - запушили документ на внешний реозиторий
+
+5. Вмержить ветку Bag Reports в Main
+
+ - git checkout main - заходим в main
+ - git merge Bag_Reports - вмержили ветку
+
+6. Запушить main на внешний репозиторий.
+
+ - git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+ - git checkout CheckLists
+ - touch CL.txt
+ - vim CL.txt - открываем редактор файла
+ - i - начать редактирование
+ - Structure:
+   1. Environment
+   2. ID
+   3. Title
+   4. Input parameters
+   5. Expected result
+   6. Status 
+ - esc
+ - :wq - сохраняем и выходим
+
+8. Запушить структуру на внешний репозиторий
+
+ - git add checklist.txt - добавили файл под гит
+ - git commit -m "add structure CL" - закоммитили файл
+ - git push - запушили документ на внешний реозиторий
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+ - зайти в репозиторий "GitBash_GitHub_HW"
+ - нажать на кнопку "Compare & pull request"
+ - нажать на кнопку "Create pull request"
+ - нажать на кнопку "Merge pull request" -> "Confirm merge"
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+ - зайти в GitBash
+ - git checkout main - переходим на ветку main
+ - git pull - синхронизировали внешнюю и локальную
